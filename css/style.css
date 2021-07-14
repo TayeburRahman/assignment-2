@@ -6,39 +6,54 @@ body{
         slader part :start.....
 -------------------------------*/
 .container {
+    width: 100%;
+    height: 600px;
     display: flex;
     background-color: #2D25A0;
 }
 .banner{
-    height: 600px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-left: 50px;
+    
 }
 .half-width{
-    margin-block: auto;
+    margin-left: 150px;
     width: 50%;
 }
-.head{
-    margin-bottom: 180px;
-    padding-left: 150px;
-}
-.head-text {
+.banner-text {
+    width: 500px;
+    margin-top: 50px;
     color:#FFFFFF;
     font-size:64px;
 }
 .banner-img{
-    display: flex;
-    align-items: center;
+    width: 556.01px;
+    height: 438;
+    
 }
 .half-width img{
     width: 556.01px;
-    height: 438px;
+    height: 438;
+    
 }
-.head-button {
+.banner-button {
     text-decoration: none;
     color: white;
     background-color:#E02C6D;
     padding: 15px  35px;
+}
+.banner-button i{
+    margin-left: 15px;
+}
+.banner-button:hover i{
+    width: 30px;
+    margin-left: 25px;
+
+
 }
 /*-------------------------------
         slader part :close.......
@@ -48,6 +63,7 @@ body{
         second section :start.....
 ---------------------------------*/
 .palyers-section{
+    width: 100%;
     margin-bottom: 100px;
     display: flex;
     flex-direction: column;
@@ -59,15 +75,17 @@ body{
     width: 70%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 50px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    grid-gap: 50px;
 }
 .palyer{
     width: 300px;
     height: 474px;
     box-shadow: 0px 0px 10px -7px;
-    margin: 0px 40px 0px 30px;
     border-radius: 5px;
-    padding: 10px;
+    padding: 15px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -84,9 +102,28 @@ body{
     width: 300px;
     height: 256px;
 }
-/*--------------------------------
-        second section :start.....
-----------------------------------*/
+/*--------------------------
+        second banner part :start..
+---------------------------------*/
+.second-banner{
+    display: flex;
+    margin: 100px;
+
+}
+#banner-text{
+    color: #0A0826;
+}
+.banner-button{
+    width: 250px;
+
+}
+.banner-button:hover p{
+    width: 250px;
+
+}
+/*--------------------------
+        second banner part :close..
+---------------------------------*/
 
 /*--------------------------------
         footer section :start..... 
@@ -117,3 +154,67 @@ body{
 /*---------------------------------
         footer section :close......
 -----------------------------------*/
+
+/*----------------------------------
+        Mobile Devices
+------------------------------------*/
+@media only screen and (max-width:688px) {
+    .banner, .palyers, .second-banner{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .half-width{
+        margin-left: 70px;
+        width: 367.01px;
+    }
+    .banner-text {
+        font-size: 25px;
+    }
+    .banner-img img, .second-banner, .second-banner, .half-width img, .footer img{
+        margin-top: 50px;
+        width: 367.01px;
+    }
+    .second-banner {
+        margin-top: 50px;
+        display: flex;
+        margin: 100px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+}
+
+
+/*-------------------------
+        Tablet devices  
+--------------------------------*/
+@media only screen and ( min-width: 688px ) and (max-width:992px){
+    .half-width{
+        margin-left: 70px;
+        width: 367.01px;
+    }
+    .half-width {
+        width:50%;
+    }
+    .half-width img, .banner-text {
+        margin-left: -50px;
+        font-size: 40px;
+        width: 350.01px;
+        height: 438;
+        margin-top: 50px;
+        grid-gap: 25px;
+    }
+    .palyers {
+        width: 70%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        grid-gap: 50px;
+    }
+}
+/*---------------------------
+        CSS end
+----------------------------*/
